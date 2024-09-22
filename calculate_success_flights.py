@@ -11,7 +11,7 @@ def is_valid_flight_duration(arrival, departure):
     arrival_time = datetime.strptime(arrival, '%H:%M')
     departure_time = datetime.strptime(departure, '%H:%M')
 
-    if departure_time <= arrival_time:
+    if departure_time < arrival_time:
         departure_time += timedelta(days=1)
 
     time_diff = departure_time - arrival_time
